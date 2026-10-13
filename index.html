@@ -181,6 +181,7 @@ html.pre-on{overflow:hidden}
 #pre .pr{border:1.5px solid #3dff8a}
 </style>
 <noscript><style>#pre{display:none}html.pre-on{overflow:auto}.pre-on .stage,.pre-on .stage *{animation-play-state:running!important}</style></noscript>
+<style>.nav b a.logo{display:inline-block;cursor:pointer}.nav b a.logo:focus-visible{outline:3px solid var(--g);outline-offset:4px;border-radius:6px}</style>
 </head>
 <body>
 <div id="pre" aria-hidden="true"><i class="pa"></i><i class="pb"></i><div class="pm"><span class="pw"><b>AL</b>soLo</span><span class="pr"></span><span class="pn"></span></div></div>
@@ -231,7 +232,7 @@ run().catch(()=>skip());
 })();
 </script>
 <div class="pg"></div>
-<nav class="nav"><b><span>AL</span>soLo</b><a class="btn" data-brief="" href="#brief" role="button">Оставить заявку</a></nav>
+<nav class="nav"><b><a class="logo" href="#hero" aria-label="ALsoLo — наверх"><span>AL</span>soLo</a></b><a class="btn" data-brief="" href="#brief" role="button">Оставить заявку</a></nav>
 
 <section id="hero">
  <div class="stage">
@@ -478,5 +479,6 @@ let tt;document.addEventListener('click',async e=>{const c=e.target.closest('[da
 $$('details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)$$('details').forEach(x=>{if(x!==d)x.open=false})}));
 tick();
 </script>
+<script>document.querySelector('a.logo').addEventListener('click',e=>{e.preventDefault();scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});history.replaceState(null,'',location.pathname+location.search)})</script>
 </body>
 </html>
